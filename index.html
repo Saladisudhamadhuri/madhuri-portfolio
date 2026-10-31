@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Saladi Madhuri, Computer Science and Engineering student and aspiring software engineer." />
+  <title>Saladi Madhuri | Software Engineer Portfolio</title>
+  <style>
+    :root{--bg:#0b1020;--panel:#121a30;--panel2:#17213b;--text:#edf2ff;--muted:#aab6d3;--accent:#8b9cff;--accent2:#65e0c2;--line:rgba(255,255,255,.11);--shadow:0 18px 55px rgba(0,0,0,.25)}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 80% 0%,#202b54 0,transparent 35%),var(--bg);color:var(--text);line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1100px,90%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(11,16,32,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:.4px}.brand span{color:var(--accent2)}
+    .navlinks{display:flex;gap:24px;color:var(--muted);font-size:.92rem}.navlinks a:hover,.textlink:hover{color:var(--accent2)}
+    .hero{padding:100px 0 82px;display:grid;grid-template-columns:1.4fr .8fr;align-items:center;gap:56px;min-height:570px}
+    .eyebrow{color:var(--accent2);font-size:.85rem;font-weight:750;letter-spacing:2px;text-transform:uppercase}
+    h1{font-size:clamp(2.8rem,7vw,5rem);line-height:1.04;letter-spacing:-2.5px;margin:16px 0 20px}h1 .gradient{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{font-size:1.08rem;color:var(--muted);max-width:640px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:12px;font-weight:750;border:1px solid var(--line);transition:.2s}.btn.primary{background:linear-gradient(120deg,#8795ff,#61ddc3);color:#08101c;border:0}.btn:hover{transform:translateY(-2px)}
+    .profile-card{background:linear-gradient(145deg,rgba(139,156,255,.14),rgba(101,224,194,.06));border:1px solid var(--line);padding:28px;border-radius:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}.profile-card:before{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:rgba(139,156,255,.15);filter:blur(25px);right:-55px;top:-55px}.monogram{width:94px;height:94px;display:grid;place-items:center;border-radius:25px;background:linear-gradient(140deg,var(--accent),var(--accent2));color:#0b1020;font-size:2rem;font-weight:900;margin-bottom:22px}.profile-card h2{margin:0 0 5px;font-size:1.4rem}.profile-card p{font-size:.95rem;margin:0 0 20px}.status{display:inline-flex;gap:8px;align-items:center;color:var(--accent2);font-size:.85rem}.dot{width:8px;height:8px;background:var(--accent2);border-radius:50%;box-shadow:0 0 14px var(--accent2)}
+    section{padding:76px 0}.section-head{margin-bottom:30px}.section-head h2{font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-1px;margin:0 0 8px}.section-head p{color:var(--muted);margin:0;max-width:650px}.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}.panel,.project,.skill-group{background:rgba(18,26,48,.78);border:1px solid var(--line);border-radius:18px;padding:25px}.panel p{color:var(--muted);margin-top:0}.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px}.fact{background:var(--panel2);border-radius:13px;padding:16px}.fact strong{display:block;font-size:1.2rem}.fact span{color:var(--muted);font-size:.86rem}
+    .skills{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.skill-group h3{margin:0 0 15px;font-size:1rem}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{padding:6px 10px;border:1px solid var(--line);border-radius:9px;color:#dbe3ff;font-size:.83rem;background:rgba(255,255,255,.025)}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{display:flex;flex-direction:column;min-height:245px;transition:.2s}.project:hover{transform:translateY(-4px);border-color:rgba(139,156,255,.45)}.project-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.project-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:12px;background:rgba(139,156,255,.14);font-size:1.3rem}.project h3{font-size:1.2rem;margin:17px 0 7px}.project p{color:var(--muted);margin:0 0 18px}.project .tags{margin-top:auto}.project .tag{font-size:.76rem}.note{font-size:.86rem;color:var(--muted);margin-top:18px}
+    .experience{border-left:2px solid rgba(139,156,255,.55);padding:2px 0 2px 24px;position:relative}.experience:before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent2)}.experience h3{margin:0}.experience .meta{color:var(--accent2);font-size:.9rem}.experience p{color:var(--muted);max-width:800px}
+    .contact-panel{padding:35px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(120deg,rgba(139,156,255,.12),rgba(101,224,194,.07));display:flex;align-items:center;justify-content:space-between;gap:28px}.contact-panel h2{margin:0 0 8px}.contact-panel p{color:var(--muted);margin:0;max-width:600px}.contact-links{display:flex;flex-wrap:wrap;gap:10px}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}.footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:30px;padding-top:70px}.profile-card{max-width:500px}.about-grid{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.contact-panel{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){.navlinks{gap:12px;font-size:.8rem}.navlinks a:nth-child(2),.navlinks a:nth-child(4){display:none}nav{height:62px}.hero{padding:60px 0}.projects{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}.panel,.project,.skill-group{padding:19px}.contact-panel{padding:24px}h1{letter-spacing:-1.5px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><nav>
+    <a class="brand" href="#home">Madhuri<span>.</span></a>
+    <div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+  </nav></div></header>
+  <main>
+    <section class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">Computer Science & Engineering</div>
+        <h1>Hi, I’m <span class="gradient">Saladi Madhuri.</span></h1>
+        <p>I’m a final-year CSE student and aspiring software engineer who enjoys building useful applications, learning new technologies, and solving problems through code.</p>
+        <div class="actions"><a class="btn primary" href="#projects">Explore my work ↘</a><a class="btn" href="#contact">Get in touch</a><a class="btn" href="https://github.com/Saladisudhamadhuri" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+      </div>
+      <aside class="profile-card">
+        <div class="monogram">SM</div>
+        <h2>Software Engineering</h2>
+        <p>Full-stack foundations · Problem solving · Continuous learning</p>
+        <div class="status"><span class="dot"></span> Open to graduate opportunities</div>
+      </aside>
+    </section>
+
+    <section id="about"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">A little about me</div><h2>Building my skills, one project at a time.</h2><p>I’m focused on strengthening my software engineering fundamentals and turning what I learn into practical projects.</p></div>
+      <div class="about-grid">
+        <div class="panel"><p>I’m pursuing a B.Tech in Computer Science and Engineering at Seshadri Rao Gudlavalleru Engineering College. My learning spans programming, web development, databases, and application development. I value readable code, curiosity, teamwork, and learning from feedback.</p><p>My goal is to join a team where I can contribute, keep learning, and help build reliable software that solves real problems.</p></div>
+        <div class="facts"><div class="fact"><strong>2027</strong><span>Expected graduation</span></div><div class="fact"><strong>CSE</strong><span>Academic discipline</span></div><div class="fact"><strong>Full-stack</strong><span>Development exposure</span></div><div class="fact"><strong>Project-led</strong><span>Practical learning</span></div></div>
+      </div>
+    </div></section>
+
+    <section id="skills"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">My toolkit</div><h2>Skills & technologies</h2><p>Technologies I have worked with or studied. I’m continuously improving through hands-on practice.</p></div>
+      <div class="skills">
+        <div class="skill-group"><h3>Programming</h3><div class="tags"><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">C</span><span class="tag">C++</span></div></div>
+        <div class="skill-group"><h3>Web development</h3><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">Express.js</span></div></div>
+        <div class="skill-group"><h3>Data & databases</h3><div class="tags"><span class="tag">MongoDB</span><span class="tag">MySQL</span><span class="tag">SQL</span><span class="tag">Pandas</span><span class="tag">NumPy</span></div></div>
+        <div class="skill-group"><h3>Tools & concepts</h3><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">OOP</span><span class="tag">Debugging</span><span class="tag">REST API basics</span></div></div>
+      </div>
+    </div></section>
+
+    <section id="projects"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Selected work</div><h2>Projects I’ve worked on</h2><p>A selection of academic and practice projects. Add repository and live-demo links when each project is ready to share.</p></div>
+      <div class="projects">
+        <article class="project"><div class="project-top"><div class="project-icon">📚</div><span class="tag">Web application</span></div><h3>Learn Hub — Learning Management Platform</h3><p>A learning platform concept designed to organize learning content and provide a more accessible experience for learners.</p><div class="tags"><span class="tag">React.js</span><span class="tag">Web development</span><span class="tag">UI development</span></div></article>
+        <article class="project"><div class="project-top"><div class="project-icon">🖐️</div><span class="tag">Computer vision</span></div><h3>AI Virtual Mouse</h3><p>A hands-free mouse-control project using hand landmarks to support gesture-based cursor movement and actions.</p><div class="tags"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">MediaPipe</span></div></article>
+        <article class="project"><div class="project-top"><div class="project-icon">🎭</div><span class="tag">AI application</span></div><h3>AuraStudy — Emotion-Aware Study Assistant</h3><p>An AI-assisted study app concept that explores emotion detection and learning guidance to support a more personalized study experience.</p><div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">NLP / ML</span></div></article>
+      </div>
+      <p class="note">Note: Project descriptions are based on the details available so far. Update any technologies, features, or project status that differ from your actual implementation.</p>
+    </div></section>
+
+    <section id="experience"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Experience</div><h2>Learning through practice</h2></div>
+      <div class="panel experience"><h3>Full-Stack Development Intern</h3><div class="meta">SmartBridge Educational Services Pvt. Ltd. · May 2024 – June 2024</div><p>Gained hands-on exposure to the MERN stack and full-stack application development, including frontend/backend integration, debugging, and working through development tasks.</p></div>
+      <div class="section-head" style="margin-top:38px"><div class="eyebrow">Education</div><h2>B.Tech — Computer Science and Engineering</h2><p>Seshadri Rao Gudlavalleru Engineering College · Expected 2027</p></div>
+    </div></section>
+
+    <section id="contact"><div class="wrap"><div class="contact-panel"><div><div class="eyebrow">Let’s connect</div><h2>Have an opportunity or project in mind?</h2><p>I’m happy to connect about graduate software engineering opportunities, internships, and collaborative projects.</p></div><div class="contact-links"><a class="btn primary" href="mailto:saladimadhuri71222@gmail.com">Email me ↗</a><a class="btn" href="https://www.linkedin.com/in/madhuril7" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="btn" href="https://github.com/Saladisudhamadhuri" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Saladi Madhuri</span><span>Designed with care · Built for the web</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
